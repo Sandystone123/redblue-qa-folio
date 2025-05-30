@@ -53,7 +53,7 @@
 
   body {
     @apply bg-background text-foreground;
-    background-image: url('https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+    background-image: url('/lovable-uploads/dd785514-8f03-4b4a-9a89-bc218b899d57.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -69,7 +69,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(3, 7, 18, 0.7);
+    background: rgba(5, 10, 25, 0.75);
     z-index: -1;
   }
 
@@ -86,8 +86,8 @@
   }
 
   .skill-card {
-    @apply relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/50 to-slate-800/30 backdrop-blur-xl border border-yellow-400/20 p-6 transition-all duration-500;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    @apply relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/60 to-slate-800/40 backdrop-blur-xl border border-yellow-400/20 p-6 transition-all duration-500;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 
   .skill-card:hover {
@@ -97,8 +97,8 @@
   }
 
   .project-card {
-    @apply relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-800/40 backdrop-blur-xl border border-yellow-400/20 p-8 transition-all duration-500;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    @apply relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/85 to-slate-800/50 backdrop-blur-xl border border-yellow-400/20 p-8 transition-all duration-500;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 
   .project-card:hover {
@@ -138,7 +138,7 @@
   }
 
   .floating-orb {
-    @apply absolute rounded-full blur-xl opacity-30;
+    @apply absolute rounded-full blur-xl opacity-20;
     animation: float 6s ease-in-out infinite;
   }
 
@@ -153,14 +153,14 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.08) 0%, transparent 70%);
     z-index: -1;
     animation: pulse-glow 4s ease-in-out infinite;
   }
 
   .tech-badge {
     @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(251, 191, 36, 0.1));
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(251, 191, 36, 0.15));
     border: 1px solid rgba(255, 215, 0, 0.3);
     color: rgb(253, 224, 71);
     backdrop-filter: blur(10px);
