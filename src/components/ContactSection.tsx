@@ -1,10 +1,9 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { Gmail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -66,7 +65,7 @@ const ContactSection = () => {
             <div className="space-y-8">
               <div className="flex items-center space-x-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
                 <div className="w-16 h-16 bg-gradient-to-r from-yellow-400/20 to-amber-300/20 rounded-2xl flex items-center justify-center border border-yellow-400/30 backdrop-blur-sm">
-                  <Gmail className="text-yellow-400 text-2xl w-8 h-8" />
+                  <Mail className="text-yellow-400 text-2xl w-8 h-8" />
                 </div>
                 <div>
                   <div className="font-semibold text-white text-lg">Gmail</div>
