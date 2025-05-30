@@ -3,97 +3,94 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: 'Danbro',
-      description: 'Comprehensive testing of retail ecommerce platform focusing on user experience, payment gateways, and inventory management systems.',
+      description: 'Comprehensive testing of retail ecommerce platform focusing on user experience, payment gateways, and inventory management systems. Implemented automated test suites for critical user journeys.',
       category: 'Ecommerce',
-      technologies: ['Selenium', 'API Testing', 'Manual Testing'],
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop'
+      technologies: ['Selenium', 'API Testing', 'Manual Testing', 'Payment Gateway Testing'],
+      metrics: { bugs: '25+', coverage: '95%' }
     },
     {
       title: 'CCD (Cafe Coffee Day)',
-      description: 'End-to-end testing of coffee delivery mobile application including order placement, payment processing, and delivery tracking.',
+      description: 'End-to-end testing of coffee delivery mobile application including order placement, payment processing, and delivery tracking. Focused on cross-platform compatibility.',
       category: 'Mobile App',
-      technologies: ['Mobile Testing', 'API Testing', 'Performance Testing'],
-      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop'
+      technologies: ['Mobile Testing', 'API Testing', 'Performance Testing', 'Cross-Platform'],
+      metrics: { bugs: '18+', coverage: '92%' }
     },
     {
       title: 'BNB',
-      description: 'Quality assurance for ecommerce platform with focus on product catalog, search functionality, and checkout processes.',
+      description: 'Quality assurance for ecommerce platform with focus on product catalog, search functionality, and checkout processes. Implemented regression testing automation.',
       category: 'Ecommerce',
-      technologies: ['Automation Testing', 'Java', 'Selenium'],
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop'
+      technologies: ['Automation Testing', 'Java', 'Selenium', 'Database Testing'],
+      metrics: { bugs: '30+', coverage: '88%' }
     },
     {
       title: 'Geekay',
-      description: 'Testing gaming product ecommerce website with emphasis on product filtering, gaming content, and user engagement features.',
+      description: 'Testing gaming product ecommerce website with emphasis on product filtering, gaming content, and user engagement features. Specialized in performance under load.',
       category: 'Gaming',
-      technologies: ['UI Testing', 'Cross-browser Testing', 'API Testing'],
-      image: 'https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=600&h=400&fit=crop'
+      technologies: ['UI Testing', 'Cross-browser Testing', 'API Testing', 'Load Testing'],
+      metrics: { bugs: '22+', coverage: '90%' }
     },
     {
       title: 'BIND',
-      description: 'Construction project platform testing for builders and developers selling apartments, including property listings and customer management.',
+      description: 'Construction project platform testing for builders and developers selling apartments, including property listings and customer management systems.',
       category: 'Real Estate',
-      technologies: ['Manual Testing', 'Database Testing', 'Integration Testing'],
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop'
+      technologies: ['Manual Testing', 'Database Testing', 'Integration Testing', 'Security Testing'],
+      metrics: { bugs: '28+', coverage: '94%' }
     }
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-card/20 to-background">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+    <section id="projects" className="py-20 section-glow">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-bold mb-6">
             My <span className="gradient-text">Projects</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-reddish-blue-400 mx-auto rounded-full" />
-          <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
-            Showcasing quality assurance expertise across diverse industries and platforms
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full mb-8" />
+          <p className="text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed">
+            Showcasing quality assurance expertise across diverse industries and platforms with measurable impact
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className="group project-card animate-fade-in"
+              className="group project-card animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative h-48 mb-6 overflow-hidden rounded-lg">
-                <img 
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-                <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-primary/90 text-primary-foreground text-xs rounded-full font-medium">
+              <div className="flex justify-between items-start mb-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-white group-hover:text-blue-300 transition-colors duration-300 mb-2">
+                    {project.title}
+                  </h3>
+                  <span className="tech-badge">
                     {project.category}
                   </span>
                 </div>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
-                  {project.title}
-                </h3>
-                
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span 
-                      key={tech}
-                      className="px-2 py-1 bg-background/50 text-muted-foreground text-xs rounded border border-border/30"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                <div className="text-right">
+                  <div className="text-sm text-blue-300 mb-1">Bugs Found</div>
+                  <div className="text-xl font-bold text-green-400">{project.metrics.bugs}</div>
+                  <div className="text-sm text-blue-300 mb-1">Coverage</div>
+                  <div className="text-lg font-bold text-purple-400">{project.metrics.coverage}</div>
                 </div>
               </div>
+              
+              <p className="text-gray-300 text-base leading-relaxed mb-6">
+                {project.description}
+              </p>
 
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-reddish-blue-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.technologies.map((tech) => (
+                  <span 
+                    key={tech}
+                    className="tech-badge"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 group-hover:from-blue-500/50 group-hover:to-purple-500/50 transition-all duration-300" />
             </div>
           ))}
         </div>

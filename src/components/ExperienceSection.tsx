@@ -1,74 +1,74 @@
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="py-20 bg-gradient-to-b from-background to-card/20">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+    <section id="experience" className="py-20 section-glow">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-bold mb-6">
             My <span className="gradient-text">Experience</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-reddish-blue-400 mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full" />
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="relative">
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-reddish-blue-400" />
+            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 to-purple-500 rounded-full" />
             
             <div className="relative pl-20 pb-12">
-              <div className="absolute left-6 top-6 w-4 h-4 bg-primary rounded-full border-4 border-background" />
+              <div className="absolute left-6 top-8 w-6 h-6 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full border-4 border-slate-900 shadow-lg" style={{ boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)' }} />
               
-              <div className="bg-card/30 backdrop-blur-sm rounded-xl p-8 border border-border/30 animate-fade-in">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+              <div className="project-card animate-fade-in-up">
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-foreground">QA Trainee</h3>
-                    <h4 className="text-lg text-primary font-semibold">TechTree IT Systems Pvt. Ltd.</h4>
+                    <h3 className="text-3xl font-bold text-white mb-2">QA Trainee</h3>
+                    <h4 className="text-xl text-blue-400 font-semibold glow-text">TechTree IT Systems Pvt. Ltd.</h4>
                   </div>
-                  <div className="text-sm text-muted-foreground bg-background/50 px-3 py-1 rounded-full mt-2 md:mt-0">
+                  <div className="text-sm tech-badge mt-4 lg:mt-0">
                     Present
                   </div>
                 </div>
 
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Currently working on end-to-end testing processes for various web and mobile applications, contributing to quality assurance in an Agile environment.
+                <p className="text-gray-300 mb-8 leading-relaxed text-lg">
+                  Currently working on end-to-end testing processes for various web and mobile applications, contributing to quality assurance in an Agile environment with cutting-edge testing methodologies.
                 </p>
 
-                <div className="space-y-4">
-                  <h5 className="text-lg font-semibold text-foreground mb-3">Key Responsibilities:</h5>
+                <div className="space-y-6">
+                  <h5 className="text-xl font-semibold text-white mb-6 glow-text">Key Responsibilities:</h5>
                   
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                      <span className="text-muted-foreground">Writing and executing detailed test cases for functional, regression, and UI testing</span>
+                  <div className="grid lg:grid-cols-2 gap-6">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-3 h-3 bg-blue-400 rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 10px rgba(59, 130, 246, 0.8)' }} />
+                      <span className="text-gray-300 leading-relaxed">Writing and executing detailed test cases for functional, regression, and UI testing</span>
                     </div>
                     
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                      <span className="text-muted-foreground">Identifying, documenting, and tracking bugs using tools like Jira</span>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-3 h-3 bg-purple-400 rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 10px rgba(139, 92, 246, 0.8)' }} />
+                      <span className="text-gray-300 leading-relaxed">Identifying, documenting, and tracking bugs using tools like Jira</span>
                     </div>
                     
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                      <span className="text-muted-foreground">Collaborating closely with developers to reproduce and resolve issues</span>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-3 h-3 bg-cyan-400 rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 10px rgba(6, 182, 212, 0.8)' }} />
+                      <span className="text-gray-300 leading-relaxed">Collaborating closely with developers to reproduce and resolve issues</span>
                     </div>
                     
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                      <span className="text-muted-foreground">Participating in sprint planning and contributing to Agile workflows</span>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-3 h-3 bg-green-400 rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 10px rgba(34, 197, 94, 0.8)' }} />
+                      <span className="text-gray-300 leading-relaxed">Participating in sprint planning and contributing to Agile workflows</span>
                     </div>
                     
-                    <div className="flex items-start space-x-3 md:col-span-2">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                      <span className="text-muted-foreground">Performing API testing using tools like Postman and Rest Assured</span>
+                    <div className="flex items-start space-x-4 lg:col-span-2">
+                      <div className="w-3 h-3 bg-yellow-400 rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 10px rgba(251, 191, 36, 0.8)' }} />
+                      <span className="text-gray-300 leading-relaxed">Performing API testing using tools like Postman and Rest Assured</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-6 pt-6 border-t border-border/30">
-                  <div className="flex flex-wrap gap-2">
+                <div className="mt-8 pt-6 border-t border-blue-500/20">
+                  <div className="flex flex-wrap gap-3">
                     {['Manual Testing', 'Automation Testing', 'API Testing', 'Jira', 'Agile', 'Sprint Planning'].map((tech) => (
                       <span 
                         key={tech}
-                        className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm border border-primary/20"
+                        className="tech-badge"
                       >
                         {tech}
                       </span>
