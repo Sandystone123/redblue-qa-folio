@@ -47,7 +47,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-xl border-b border-blue-500/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-xl border-b border-yellow-400/20">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold gradient-text">Sandeep P B</div>
@@ -59,13 +59,13 @@ const Navigation = () => {
                 onClick={() => scrollToSection(item.id)}
                 className={`relative text-sm font-medium transition-all duration-300 px-4 py-2 rounded-lg ${
                   activeSection === item.id
-                    ? 'text-blue-400 bg-blue-500/10 border border-blue-500/30'
-                    : 'text-gray-300 hover:text-blue-300 hover:bg-blue-500/5'
+                    ? 'text-yellow-300 bg-yellow-400/10 border border-yellow-400/30'
+                    : 'text-gray-300 hover:text-yellow-300 hover:bg-yellow-400/5'
                 }`}
               >
                 {item.label}
                 {activeSection === item.id && (
-                  <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-400 rounded-full" />
+                  <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-yellow-400 rounded-full" />
                 )}
               </button>
             ))}
@@ -74,7 +74,7 @@ const Navigation = () => {
       </div>
       
       <div 
-        className="h-1 bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300"
+        className="h-1 bg-gradient-to-r from-yellow-400 to-amber-300 transition-all duration-300"
         style={{ width: `${scrollProgress}%` }}
       />
     </nav>

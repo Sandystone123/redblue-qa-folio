@@ -47,8 +47,8 @@ const ContactSection = () => {
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full mb-8" />
-          <p className="text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-amber-300 mx-auto rounded-full mb-8" />
+          <p className="text-xl text-yellow-200 max-w-3xl mx-auto leading-relaxed">
             Let's discuss how I can help ensure the quality of your next project with cutting-edge testing solutions
           </p>
         </div>
@@ -64,22 +64,22 @@ const ContactSection = () => {
 
             <div className="space-y-8">
               <div className="flex items-center space-x-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center border border-blue-500/30 backdrop-blur-sm">
-                  <span className="text-blue-400 text-2xl">📧</span>
+                <div className="w-16 h-16 bg-gradient-to-r from-yellow-400/20 to-amber-300/20 rounded-2xl flex items-center justify-center border border-yellow-400/30 backdrop-blur-sm">
+                  <span className="text-yellow-400 text-2xl">📧</span>
                 </div>
                 <div>
                   <div className="font-semibold text-white text-lg glow-text">Email</div>
-                  <div className="text-blue-200">pbsandeep77@gmail.com</div>
+                  <div className="text-yellow-200">pbsandeep77@gmail.com</div>
                 </div>
               </div>
 
               <div className="flex items-center space-x-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center border border-purple-500/30 backdrop-blur-sm">
-                  <span className="text-purple-400 text-2xl">💼</span>
+                <div className="w-16 h-16 bg-gradient-to-r from-amber-400/20 to-yellow-300/20 rounded-2xl flex items-center justify-center border border-amber-400/30 backdrop-blur-sm">
+                  <span className="text-amber-400 text-2xl">💼</span>
                 </div>
                 <div>
                   <div className="font-semibold text-white text-lg glow-text">Professional</div>
-                  <div className="text-purple-200">QA Engineer at TechTree IT Systems</div>
+                  <div className="text-amber-200">QA Engineer at TechTree IT Systems</div>
                 </div>
               </div>
             </div>
@@ -88,7 +88,7 @@ const ContactSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="flex-1 border-2 border-blue-400/50 text-blue-300 hover:bg-blue-400/10 hover:border-blue-400 backdrop-blur-sm"
+                className="flex-1 border-2 border-yellow-400/50 text-yellow-300 hover:bg-yellow-400/10 hover:border-yellow-400 backdrop-blur-sm"
                 onClick={() => window.open('https://linkedin.com', '_blank')}
               >
                 LinkedIn
@@ -96,14 +96,14 @@ const ContactSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="flex-1 border-2 border-purple-400/50 text-purple-300 hover:bg-purple-400/10 hover:border-purple-400 backdrop-blur-sm"
+                className="flex-1 border-2 border-amber-400/50 text-amber-300 hover:bg-amber-400/10 hover:border-amber-400 backdrop-blur-sm"
                 onClick={() => window.open('https://github.com', '_blank')}
               >
                 GitHub
               </Button>
               <Button
                 size="lg"
-                className="flex-1 glow-button text-white font-semibold"
+                className="flex-1 glow-button text-slate-900 font-semibold"
               >
                 Download Resume
               </Button>
@@ -123,7 +123,7 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="bg-slate-900/50 border-blue-500/30 focus:border-blue-400 text-white placeholder-gray-400 backdrop-blur-sm"
+                    className="bg-slate-900/50 border-yellow-400/30 focus:border-yellow-400 text-white placeholder-gray-400 backdrop-blur-sm"
                   />
                 </div>
                 <div>
@@ -137,7 +137,7 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-slate-900/50 border-blue-500/30 focus:border-blue-400 text-white placeholder-gray-400 backdrop-blur-sm"
+                    className="bg-slate-900/50 border-yellow-400/30 focus:border-yellow-400 text-white placeholder-gray-400 backdrop-blur-sm"
                   />
                 </div>
               </div>
@@ -152,7 +152,7 @@ const ContactSection = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="bg-slate-900/50 border-blue-500/30 focus:border-blue-400 text-white placeholder-gray-400 backdrop-blur-sm"
+                  className="bg-slate-900/50 border-yellow-400/30 focus:border-yellow-400 text-white placeholder-gray-400 backdrop-blur-sm"
                 />
               </div>
 
@@ -167,14 +167,14 @@ const ContactSection = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="bg-slate-900/50 border-blue-500/30 focus:border-blue-400 text-white placeholder-gray-400 resize-none backdrop-blur-sm"
+                  className="bg-slate-900/50 border-yellow-400/30 focus:border-yellow-400 text-white placeholder-gray-400 resize-none backdrop-blur-sm"
                 />
               </div>
 
               <Button
                 type="submit"
                 size="lg"
-                className="w-full glow-button text-white font-semibold text-lg py-4"
+                className="w-full glow-button text-slate-900 font-semibold text-lg py-4"
               >
                 Send Message
               </Button>
