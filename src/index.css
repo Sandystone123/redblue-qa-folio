@@ -53,8 +53,24 @@
 
   body {
     @apply bg-background text-foreground;
-    background: radial-gradient(ellipse at top, rgb(16, 19, 40), rgb(3, 7, 18));
+    background-image: url('https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     min-height: 100vh;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(3, 7, 18, 0.7);
+    z-index: -1;
   }
 
   html {
@@ -67,10 +83,6 @@
     @apply bg-gradient-to-r from-yellow-300 via-amber-400 to-yellow-200 bg-clip-text text-transparent;
     background-size: 200% 200%;
     animation: gradient-shift 3s ease-in-out infinite;
-  }
-
-  .glow-text {
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3), 0 0 30px rgba(255, 215, 0, 0.2);
   }
 
   .skill-card {
@@ -152,17 +164,6 @@
     border: 1px solid rgba(255, 215, 0, 0.3);
     color: rgb(253, 224, 71);
     backdrop-filter: blur(10px);
-  }
-
-  .progress-bar {
-    @apply h-2 rounded-full overflow-hidden;
-    background: linear-gradient(90deg, rgba(255, 215, 0, 0.2), rgba(251, 191, 36, 0.2));
-  }
-
-  .progress-fill {
-    @apply h-full rounded-full;
-    background: linear-gradient(90deg, #ffd700, #fbbf24);
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
   }
 }
 

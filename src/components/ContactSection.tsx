@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { Gmail } from 'lucide-react';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -56,7 +57,7 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-16">
           <div className="space-y-10">
             <div className="animate-fade-in-up">
-              <h3 className="text-3xl font-bold text-white mb-8 glow-text">Let's Connect</h3>
+              <h3 className="text-3xl font-bold text-white mb-8">Let's Connect</h3>
               <p className="text-gray-300 mb-10 leading-relaxed text-lg">
                 I'm always interested in discussing new opportunities, collaborations, or just chatting about quality assurance and testing strategies. Feel free to reach out!
               </p>
@@ -65,10 +66,10 @@ const ContactSection = () => {
             <div className="space-y-8">
               <div className="flex items-center space-x-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
                 <div className="w-16 h-16 bg-gradient-to-r from-yellow-400/20 to-amber-300/20 rounded-2xl flex items-center justify-center border border-yellow-400/30 backdrop-blur-sm">
-                  <span className="text-yellow-400 text-2xl">📧</span>
+                  <Gmail className="text-yellow-400 text-2xl w-8 h-8" />
                 </div>
                 <div>
-                  <div className="font-semibold text-white text-lg glow-text">Email</div>
+                  <div className="font-semibold text-white text-lg">Gmail</div>
                   <div className="text-yellow-200">pbsandeep77@gmail.com</div>
                 </div>
               </div>
@@ -78,7 +79,7 @@ const ContactSection = () => {
                   <span className="text-amber-400 text-2xl">💼</span>
                 </div>
                 <div>
-                  <div className="font-semibold text-white text-lg glow-text">Professional</div>
+                  <div className="font-semibold text-white text-lg">Professional</div>
                   <div className="text-amber-200">QA Engineer at TechTree IT Systems</div>
                 </div>
               </div>
@@ -114,7 +115,7 @@ const ContactSection = () => {
             <form onSubmit={handleSubmit} className="project-card space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-white mb-3 glow-text">
+                  <label htmlFor="name" className="block text-sm font-medium text-white mb-3">
                     Name
                   </label>
                   <Input
@@ -127,7 +128,7 @@ const ContactSection = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-white mb-3 glow-text">
+                  <label htmlFor="email" className="block text-sm font-medium text-white mb-3">
                     Email
                   </label>
                   <Input
@@ -143,7 +144,7 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-white mb-3 glow-text">
+                <label htmlFor="subject" className="block text-sm font-medium text-white mb-3">
                   Subject
                 </label>
                 <Input
@@ -157,7 +158,7 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-white mb-3 glow-text">
+                <label htmlFor="message" className="block text-sm font-medium text-white mb-3">
                   Message
                 </label>
                 <Textarea
