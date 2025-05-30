@@ -70,6 +70,6 @@
   }
 
   .project-card {
-    @apply group relative overflow-hidden rounded-xl bg-gradient-to-br from-card/30 to-card/10 backdrop-blur-sm border border-border/30 p-6 transition-all duration-500 hover:scale-[1.02] hover:from-card/50 hover:to-card/20 hover:border-primary/30;
+    @apply relative overflow-hidden rounded-xl bg-gradient-to-br from-card/30 to-card/10 backdrop-blur-sm border border-border/30 p-6 transition-all duration-500 hover:scale-[1.02] hover:from-card/50 hover:to-card/20 hover:border-primary/30;
   }
 }
