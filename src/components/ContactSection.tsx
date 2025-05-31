@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -41,14 +42,14 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 section-glow">
+    <section id="contact" className="py-20 section-enter">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">
-            Get In <span className="gradient-text">Touch</span>
+          <h2 className="text-6xl md:text-7xl font-bold mb-6 cosmic-text">
+            Get In <span className="accent-text">Touch</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-amber-300 mx-auto rounded-full mb-8" />
-          <p className="text-xl text-yellow-200 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-8" />
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
             Let's discuss how I can help ensure the quality of your next project with cutting-edge testing solutions
           </p>
         </div>
@@ -56,30 +57,30 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-16">
           <div className="space-y-10">
             <div className="animate-fade-in-up">
-              <h3 className="text-3xl font-bold text-white mb-8">Let's Connect</h3>
-              <p className="text-gray-300 mb-10 leading-relaxed text-lg">
+              <h3 className="text-3xl font-bold cosmic-text mb-8">Let's Connect</h3>
+              <p className="text-gray-300 mb-10 leading-relaxed text-lg font-light">
                 I'm always interested in discussing new opportunities, collaborations, or just chatting about quality assurance and testing strategies. Feel free to reach out!
               </p>
             </div>
 
             <div className="space-y-8">
               <div className="flex items-center space-x-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-                <div className="w-16 h-16 bg-gradient-to-r from-yellow-400/20 to-amber-300/20 rounded-2xl flex items-center justify-center border border-yellow-400/30 backdrop-blur-sm">
-                  <Mail className="text-yellow-400 text-2xl w-8 h-8" />
+                <div className="social-icon">
+                  <Mail className="text-blue-400 w-6 h-6" />
                 </div>
                 <div>
-                  <div className="font-semibold text-white text-lg">Gmail</div>
-                  <div className="text-yellow-200">pbsandeep77@gmail.com</div>
+                  <div className="font-semibold cosmic-text text-lg">Gmail</div>
+                  <div className="text-gray-300">pbsandeep77@gmail.com</div>
                 </div>
               </div>
 
               <div className="flex items-center space-x-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                <div className="w-16 h-16 bg-gradient-to-r from-amber-400/20 to-yellow-300/20 rounded-2xl flex items-center justify-center border border-amber-400/30 backdrop-blur-sm">
-                  <span className="text-amber-400 text-2xl">💼</span>
+                <div className="social-icon">
+                  <span className="text-purple-400 text-xl">💼</span>
                 </div>
                 <div>
-                  <div className="font-semibold text-white text-lg">Professional</div>
-                  <div className="text-amber-200">QA Engineer at TechTree IT Systems</div>
+                  <div className="font-semibold cosmic-text text-lg">Professional</div>
+                  <div className="text-gray-300">QA Engineer at TechTree IT Systems</div>
                 </div>
               </div>
             </div>
@@ -88,7 +89,7 @@ const ContactSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="flex-1 border-2 border-yellow-400/50 text-yellow-300 hover:bg-yellow-400/10 hover:border-yellow-400 backdrop-blur-sm"
+                className="flex-1 modern-button border-2 border-blue-500/50 hover:border-blue-400"
                 onClick={() => window.open('https://linkedin.com', '_blank')}
               >
                 LinkedIn
@@ -96,14 +97,14 @@ const ContactSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="flex-1 border-2 border-amber-400/50 text-amber-300 hover:bg-amber-400/10 hover:border-amber-400 backdrop-blur-sm"
+                className="flex-1 modern-button border-2 border-purple-500/50 hover:border-purple-400"
                 onClick={() => window.open('https://github.com', '_blank')}
               >
                 GitHub
               </Button>
               <Button
                 size="lg"
-                className="flex-1 glow-button text-slate-900 font-semibold"
+                className="flex-1 accent-button font-semibold"
               >
                 Download Resume
               </Button>
@@ -114,7 +115,7 @@ const ContactSection = () => {
             <form onSubmit={handleSubmit} className="project-card space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-white mb-3">
+                  <label htmlFor="name" className="block text-sm font-medium cosmic-text mb-3">
                     Name
                   </label>
                   <Input
@@ -123,11 +124,11 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="bg-slate-900/50 border-yellow-400/30 focus:border-yellow-400 text-white placeholder-gray-400 backdrop-blur-sm"
+                    className="bg-slate-800/50 border-slate-600/50 focus:border-blue-400 text-white placeholder-gray-400 backdrop-blur-sm"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-white mb-3">
+                  <label htmlFor="email" className="block text-sm font-medium cosmic-text mb-3">
                     Email
                   </label>
                   <Input
@@ -137,13 +138,13 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-slate-900/50 border-yellow-400/30 focus:border-yellow-400 text-white placeholder-gray-400 backdrop-blur-sm"
+                    className="bg-slate-800/50 border-slate-600/50 focus:border-blue-400 text-white placeholder-gray-400 backdrop-blur-sm"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-white mb-3">
+                <label htmlFor="subject" className="block text-sm font-medium cosmic-text mb-3">
                   Subject
                 </label>
                 <Input
@@ -152,12 +153,12 @@ const ContactSection = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="bg-slate-900/50 border-yellow-400/30 focus:border-yellow-400 text-white placeholder-gray-400 backdrop-blur-sm"
+                  className="bg-slate-800/50 border-slate-600/50 focus:border-blue-400 text-white placeholder-gray-400 backdrop-blur-sm"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-white mb-3">
+                <label htmlFor="message" className="block text-sm font-medium cosmic-text mb-3">
                   Message
                 </label>
                 <Textarea
@@ -167,14 +168,14 @@ const ContactSection = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="bg-slate-900/50 border-yellow-400/30 focus:border-yellow-400 text-white placeholder-gray-400 resize-none backdrop-blur-sm"
+                  className="bg-slate-800/50 border-slate-600/50 focus:border-blue-400 text-white placeholder-gray-400 resize-none backdrop-blur-sm"
                 />
               </div>
 
               <Button
                 type="submit"
                 size="lg"
-                className="w-full glow-button text-slate-900 font-semibold text-lg py-4"
+                className="w-full accent-button text-lg py-4 font-semibold"
               >
                 Send Message
               </Button>

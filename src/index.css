@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -53,6 +55,7 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
     background-image: url('/lovable-uploads/dd785514-8f03-4b4a-9a89-bc218b899d57.png');
     background-size: cover;
     background-position: center;
@@ -60,6 +63,7 @@
     background-repeat: no-repeat;
     min-height: 100vh;
     position: relative;
+    overflow-x: hidden;
   }
 
   body::before {
@@ -69,55 +73,74 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(5, 10, 25, 0.75);
+    background: linear-gradient(135deg, rgba(5, 10, 25, 0.85) 0%, rgba(15, 23, 42, 0.8) 50%, rgba(7, 17, 32, 0.9) 100%);
     z-index: -1;
   }
 
   html {
     scroll-behavior: smooth;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
 }
 
 @layer components {
-  .gradient-text {
-    @apply bg-gradient-to-r from-yellow-300 via-amber-400 to-yellow-200 bg-clip-text text-transparent;
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease-in-out infinite;
+  .cosmic-text {
+    @apply text-white;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+
+  .accent-text {
+    @apply text-yellow-300;
+    text-shadow: 0 0 10px rgba(253, 224, 71, 0.4);
   }
 
   .skill-card {
-    @apply relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/60 to-slate-800/40 backdrop-blur-xl border border-yellow-400/20 p-6 transition-all duration-500;
+    @apply relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/70 to-slate-800/50 backdrop-blur-xl border border-slate-700/50 p-6 transition-all duration-500;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 
   .skill-card:hover {
-    @apply border-yellow-400/50 scale-105;
+    @apply border-yellow-400/60 scale-105;
     box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
     transform: translateY(-8px) scale(1.05);
   }
 
   .project-card {
-    @apply relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/85 to-slate-800/50 backdrop-blur-xl border border-yellow-400/20 p-8 transition-all duration-500;
+    @apply relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/85 to-slate-800/60 backdrop-blur-xl border border-slate-700/50 p-8 transition-all duration-500;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 
   .project-card:hover {
-    @apply border-yellow-400/50;
+    @apply border-yellow-400/60;
     box-shadow: 0 25px 50px rgba(255, 215, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.02);
   }
 
-  .glow-button {
-    @apply relative overflow-hidden;
-    background: linear-gradient(45deg, #ffd700, #ffed4e, #fbbf24);
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease-in-out infinite;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  .modern-button {
+    @apply relative overflow-hidden px-8 py-4 rounded-full font-semibold transition-all duration-300;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    color: white;
+  }
+
+  .modern-button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+  }
+
+  .accent-button {
+    @apply relative overflow-hidden px-8 py-4 rounded-full font-semibold transition-all duration-300;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
     color: #1a1a2e;
   }
 
-  .glow-button:hover {
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 0 0 40px rgba(251, 191, 36, 0.4);
+  .accent-button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.6);
   }
 
   .starfield {
@@ -132,44 +155,75 @@
 
   .star {
     position: absolute;
-    background: #ffd700;
+    background: #ffffff;
     border-radius: 50%;
-    animation: twinkle 3s infinite;
+    animation: twinkle 4s ease-in-out infinite;
   }
 
-  .floating-orb {
-    @apply absolute rounded-full blur-xl opacity-20;
-    animation: float 6s ease-in-out infinite;
+  .floating-particle {
+    @apply absolute rounded-full opacity-30;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+    animation: float-cosmic 8s ease-in-out infinite;
   }
 
-  .section-glow {
-    position: relative;
+  .nav-glass {
+    @apply backdrop-blur-xl border-b border-white/10;
+    background: rgba(15, 23, 42, 0.7);
+    transition: all 0.3s ease;
   }
 
-  .section-glow::before {
+  .nav-glass.scrolled {
+    @apply border-white/20;
+    background: rgba(15, 23, 42, 0.95);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .section-enter {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+
+  .section-enter.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .progress-bar {
+    @apply h-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transition-all duration-1000;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+
+  .timeline-item {
+    @apply relative pl-8 pb-12;
+  }
+
+  .timeline-item::before {
     content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 215, 0, 0.08) 0%, transparent 70%);
-    z-index: -1;
-    animation: pulse-glow 4s ease-in-out infinite;
+    @apply absolute left-3 top-0 w-0.5 h-full bg-gradient-to-b from-blue-500 to-purple-600;
   }
 
-  .tech-badge {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(251, 191, 36, 0.15));
-    border: 1px solid rgba(255, 215, 0, 0.3);
-    color: rgb(253, 224, 71);
+  .timeline-dot {
+    @apply absolute left-1 top-2 w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full border-2 border-slate-900;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+  }
+
+  .profile-image {
+    @apply w-48 h-48 rounded-full border-4 border-white/20;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .social-icon {
+    @apply w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
     backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
-}
 
-@keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  .social-icon:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
 }
 
 @keyframes twinkle {
@@ -177,26 +231,37 @@
   50% { opacity: 1; transform: scale(1.2); }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  33% { transform: translateY(-20px) rotate(120deg); }
-  66% { transform: translateY(10px) rotate(240deg); }
+@keyframes float-cosmic {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+  33% { transform: translateY(-30px) rotate(120deg); opacity: 0.6; }
+  66% { transform: translateY(15px) rotate(240deg); opacity: 0.4; }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { opacity: 0.3; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.1); }
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
 }
 
 @keyframes fade-in-up {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.typing-animation {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(50, end) forwards;
 }
 
 .animate-fade-in-up {
