@@ -6,6 +6,8 @@ import AboutSection from '@/components/AboutSection';
 import SkillsSection from '@/components/SkillsSection';
 import ExperienceSection from '@/components/ExperienceSection';
 import ProjectsSection from '@/components/ProjectsSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
@@ -35,12 +37,19 @@ const Index = () => {
       <SkillsSection />
       <ExperienceSection />
       <ProjectsSection />
+      <TestimonialsSection />
+      <BlogSection />
       <ContactSection />
       
-      <footer className="py-12 text-center border-t border-slate-700/50 backdrop-blur-xl">
-        <p className="text-gray-400 font-light">
-          © 2024 Sandeep P B. Crafted with passion for quality assurance.
-        </p>
+      <footer className="py-16 text-center border-t border-white/20 backdrop-blur-xl content-layer">
+        <div className="glass-panel-dark rounded-2xl max-w-4xl mx-auto p-8">
+          <p className="text-gray-300 font-light text-lg mb-4">
+            © 2024 Sandeep P B. Crafted with passion for quality assurance excellence.
+          </p>
+          <p className="text-gray-400 text-sm">
+            Ensuring software quality through innovative testing solutions and AI-driven validation.
+          </p>
+        </div>
       </footer>
     </div>
   );

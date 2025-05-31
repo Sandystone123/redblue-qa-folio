@@ -5,14 +5,66 @@ const SkillsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const skills = [
-    { name: 'Selenium WebDriver', level: 90, icon: '🔧', color: 'from-blue-400 to-blue-600' },
-    { name: 'Java', level: 85, icon: '☕', color: 'from-orange-400 to-red-500' },
-    { name: 'API Testing', level: 88, icon: '🌐', color: 'from-green-400 to-emerald-600' },
-    { name: 'AI Tools Integration', level: 75, icon: '🤖', color: 'from-purple-400 to-pink-500' },
-    { name: 'Report Testing', level: 82, icon: '📊', color: 'from-yellow-400 to-orange-500' },
-    { name: 'Postman', level: 90, icon: '📮', color: 'from-cyan-400 to-blue-500' },
-    { name: 'Jira', level: 85, icon: '📋', color: 'from-indigo-400 to-purple-500' },
-    { name: 'Test Automation', level: 87, icon: '⚡', color: 'from-pink-400 to-red-500' },
+    { 
+      name: 'Selenium WebDriver', 
+      icon: '🔧', 
+      description: 'Automated web testing',
+      color: 'from-green-400 to-emerald-600'
+    },
+    { 
+      name: 'Java', 
+      icon: '☕', 
+      description: 'Programming language',
+      color: 'from-orange-400 to-red-500'
+    },
+    { 
+      name: 'API Testing', 
+      icon: '🌐', 
+      description: 'RESTful services testing',
+      color: 'from-blue-400 to-cyan-500'
+    },
+    { 
+      name: 'AI Tools Integration', 
+      icon: '🤖', 
+      description: 'Machine learning in QA',
+      color: 'from-purple-400 to-pink-500'
+    },
+    { 
+      name: 'Report Testing', 
+      icon: '📊', 
+      description: 'Data validation',
+      color: 'from-yellow-400 to-orange-500'
+    },
+    { 
+      name: 'Postman', 
+      icon: '📮', 
+      description: 'API development environment',
+      color: 'from-orange-400 to-red-400'
+    },
+    { 
+      name: 'Jira', 
+      icon: '📋', 
+      description: 'Project management',
+      color: 'from-blue-500 to-indigo-600'
+    },
+    { 
+      name: 'Test Automation', 
+      icon: '⚡', 
+      description: 'Automated testing frameworks',
+      color: 'from-cyan-400 to-blue-500'
+    },
+    { 
+      name: 'CCD Testing', 
+      icon: '☕', 
+      description: 'Cafe Coffee Day app testing',
+      color: 'from-amber-400 to-orange-600'
+    },
+    { 
+      name: 'BNB Platform', 
+      icon: '🌟', 
+      description: 'E-commerce platform testing',
+      color: 'from-purple-500 to-pink-600'
+    },
   ];
 
   useEffect(() => {
@@ -34,68 +86,60 @@ const SkillsSection = () => {
   }, []);
 
   return (
-    <section id="skills" className="py-20 section-enter">
+    <section id="skills" className="py-24 section-enter content-layer">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 cosmic-text">
-            My <span className="accent-text">Skills</span>
+        <div className="text-center mb-24">
+          <h2 className="text-6xl md:text-7xl font-bold mb-8 cosmic-text">
+            Technical <span className="accent-text">Skills</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full mb-8" />
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-light">
-            A comprehensive toolkit for delivering high-quality software testing solutions with cutting-edge technologies
+          <div className="w-32 h-1 bg-gradient-to-r from-blue-300 to-purple-300 mx-auto rounded-full mb-8" />
+          <p className="text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed font-light">
+            A comprehensive arsenal of cutting-edge tools and technologies for delivering exceptional software quality assurance
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {skills.map((skill, index) => (
             <div
               key={skill.name}
-              className="skill-card animate-fade-in-up text-center"
+              className="skill-card group animate-fade-in-up text-center"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-4xl mb-4">{skill.icon}</div>
-              <h3 className="font-semibold text-lg cosmic-text mb-4">
+              <div className="relative mb-6">
+                <div className={`text-5xl mb-4 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12`}>
+                  {skill.icon}
+                </div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-300/20 to-purple-300/20 blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
+              </div>
+
+              <h3 className="font-bold text-lg cosmic-text mb-3 group-hover:text-blue-300 transition-colors duration-300">
                 {skill.name}
               </h3>
               
-              {/* Circular Progress */}
-              <div className="relative w-24 h-24 mx-auto mb-4">
-                <svg className="w-24 h-24 transform -rotate-90" viewBox="0 0 100 100">
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="45"
-                    stroke="rgba(255,255,255,0.1)"
-                    strokeWidth="8"
-                    fill="none"
-                  />
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="45"
-                    stroke="url(#gradient)"
-                    strokeWidth="8"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeDasharray={`${2 * Math.PI * 45}`}
-                    strokeDashoffset={isVisible ? `${2 * Math.PI * 45 * (1 - skill.level / 100)}` : `${2 * Math.PI * 45}`}
-                    style={{
-                      transition: 'stroke-dashoffset 1.5s ease-in-out',
-                      transitionDelay: `${index * 0.1}s`
-                    }}
-                  />
-                  <defs>
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#667eea" />
-                      <stop offset="100%" stopColor="#764ba2" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-xl font-bold text-white">{skill.level}%</span>
-                </div>
+              <p className="text-gray-300 text-sm leading-relaxed font-light group-hover:text-white transition-colors duration-300">
+                {skill.description}
+              </p>
+
+              <div className="mt-6 pt-4 border-t border-white/10">
+                <div className={`w-full h-1 bg-gradient-to-r ${skill.color} rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300`} />
               </div>
             </div>
+          ))}
+        </div>
+
+        {/* Floating particles for enhanced visual effect */}
+        <div className="relative">
+          {[...Array(12)].map((_, i) => (
+            <div
+              key={i}
+              className="particle"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 8}s`,
+                animationDuration: `${6 + Math.random() * 4}s`,
+              }}
+            />
           ))}
         </div>
       </div>
