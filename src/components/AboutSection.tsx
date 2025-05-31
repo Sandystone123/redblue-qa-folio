@@ -1,4 +1,6 @@
 
+import ProfilePhoto from './ProfilePhoto';
+
 const AboutSection = () => {
   return (
     <section id="about" className="py-24 section-enter content-layer">
@@ -53,32 +55,9 @@ const AboutSection = () => {
 
           <div className="relative flex justify-center">
             <div className="relative">
-              {/* Enhanced Profile Photo Container */}
+              {/* Enhanced Profile Photo Container with Interactive Component */}
               <div className="glass-panel rounded-full p-6 mb-10 animate-slide-in-right">
-                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-400/30 backdrop-blur-xl flex items-center justify-center border-2 border-white/30 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 animate-pulse" />
-                  <div className="text-center z-10">
-                    <div className="w-24 h-24 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mx-auto mb-6 flex items-center justify-center shadow-2xl">
-                      <span className="text-4xl font-bold text-white">SP</span>
-                    </div>
-                    <p className="text-gray-200 text-xl font-semibold">Profile Photo</p>
-                    <p className="text-gray-400 text-sm mt-2">Upload separately</p>
-                  </div>
-                  
-                  {/* Floating particles around photo */}
-                  {[...Array(8)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="absolute w-2 h-2 bg-white/60 rounded-full"
-                      style={{
-                        left: `${Math.random() * 100}%`,
-                        top: `${Math.random() * 100}%`,
-                        animation: `particle-float ${4 + Math.random() * 2}s ease-in-out infinite`,
-                        animationDelay: `${Math.random() * 2}s`,
-                      }}
-                    />
-                  ))}
-                </div>
+                <ProfilePhoto />
               </div>
               
               {/* Enhanced Stats Grid */}
