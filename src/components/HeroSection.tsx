@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { ChevronDown } from 'lucide-react';
 
 const HeroSection = () => {
   const [currentText, setCurrentText] = useState('');
@@ -36,11 +37,18 @@ const HeroSection = () => {
     }
   };
 
+  const scrollToAbout = () => {
+    const element = document.getElementById('about');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Enhanced Cosmic Background Elements */}
-      <div className="starfield">
-        {[...Array(200)].map((_, i) => (
+      {/* Enhanced Starfield */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(150)].map((_, i) => (
           <div
             key={i}
             className="star"
@@ -56,30 +64,25 @@ const HeroSection = () => {
         ))}
       </div>
 
-      {/* Floating Cosmic Particles */}
-      <div className="floating-particle w-96 h-96 top-20 left-20" style={{ animationDelay: '0s' }} />
-      <div className="floating-particle w-64 h-64 bottom-20 right-20" style={{ animationDelay: '3s' }} />
-      <div className="floating-particle w-48 h-48 top-1/2 right-1/3" style={{ animationDelay: '6s' }} />
-
       <div className="relative z-10 max-w-6xl mx-auto text-center px-6">
-        <div className="animate-fade-in-up">
-          <h1 className="text-7xl md:text-9xl font-bold mb-8 cosmic-text">
+        <div className="glass-panel rounded-3xl p-12 animate-fade-in-up">
+          <h1 className="text-7xl md:text-8xl font-bold mb-6 cosmic-text">
             <span className="block mb-4">Sandeep P B</span>
-            <span className="block accent-text text-5xl md:text-7xl font-semibold">QA Engineer</span>
+            <span className="block accent-text text-4xl md:text-5xl font-semibold">QA Engineer</span>
           </h1>
           
-          <div className="h-24 mb-12">
-            <p className="text-2xl md:text-3xl text-gray-200 font-light">
+          <div className="h-16 mb-12">
+            <p className="text-xl md:text-2xl text-gray-200 font-light">
               {currentText}
-              {isTyping && <span className="animate-pulse text-yellow-400 ml-1">|</span>}
+              {isTyping && <span className="animate-pulse text-blue-400 ml-1">|</span>}
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
             <Button 
               onClick={scrollToContact}
               size="lg"
-              className="accent-button text-lg px-10 py-4 font-semibold transition-all duration-300"
+              className="primary-button text-lg px-10 py-4 font-semibold"
             >
               Get In Touch
             </Button>
@@ -88,11 +91,18 @@ const HeroSection = () => {
               onClick={scrollToProjects}
               variant="outline" 
               size="lg"
-              className="modern-button text-lg px-10 py-4 font-semibold border-2 border-blue-500/50 hover:border-blue-400"
+              className="modern-button text-lg px-10 py-4 font-semibold border-2 border-blue-400/50"
             >
               View My Work
             </Button>
           </div>
+        </div>
+
+        <div className="scroll-indicator">
+          <ChevronDown 
+            className="w-8 h-8 text-white/70 cursor-pointer hover:text-blue-400 transition-colors"
+            onClick={scrollToAbout}
+          />
         </div>
       </div>
     </section>
